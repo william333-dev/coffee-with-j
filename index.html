@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee with J — Specialty Coffee &amp; Fresh-Baked Treats · Invercargill</title>
+<meta name="description" content="Coffee with J — a cozy family-run specialty coffee shop and in-house bakery in Invercargill. Fresh doughnuts, ube &amp; pistachio cream buns, cinnamon buns and the best coffee in town. Every sip tells a story.">
+<meta name="theme-color" content="#1a2744">
+<meta property="og:title" content="Coffee with J — Every sip tells a story">
+<meta property="og:description" content="Cozy family-run specialty coffee &amp; in-house Filipino bakery in Invercargill. Fresh-baked daily.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a2744'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%23f6efe3' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2744; --navy-2:#13203a; --royal:#2d4a8a; --royal-2:#3a5da6;
+  --cream:#f6efe3; --cream-2:#fbf6ec; --paper:#fffdf8;
+  --caramel:#c8924a; --caramel-2:#b07c38; --caramel-soft:#e9d3ad;
+  --ink:#22293a; --body:#4a5468; --muted:#8a93a6; --line:#ece2d2;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Nunito Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --shadow:0 4px 14px rgba(26,39,68,.06),0 22px 48px rgba(26,39,68,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--body);line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+section{position:relative}
+.section{padding:clamp(64px,9vw,112px) 0}
+.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.26em;font-size:.75rem;font-weight:700;color:var(--caramel-2);display:inline-block;margin-bottom:1em}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--sans);font-weight:700;font-size:.95rem;letter-spacing:.01em;
+  padding:.92em 1.7em;border-radius:50px;cursor:pointer;border:2px solid transparent;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,background .3s,color .3s,border-color .3s}
+.btn svg{width:1.1em;height:1.1em}
+.btn-primary{background:var(--caramel);color:#fff;box-shadow:0 10px 26px rgba(200,146,74,.32)}
+.btn-primary:hover{background:var(--caramel-2);transform:translateY(-3px);box-shadow:0 16px 34px rgba(200,146,74,.44)}
+.btn-navy{background:var(--navy);color:var(--cream)}
+.btn-navy:hover{background:var(--royal);transform:translateY(-3px)}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--caramel-soft)}
+.btn-ghost:hover{border-color:var(--caramel);background:#fff;transform:translateY(-3px)}
+.btn-light{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4);backdrop-filter:blur(4px)}
+.btn-light:hover{background:rgba(255,255,255,.24);transform:translateY(-3px)}
+
+/* ---------- steam motif ---------- */
+@keyframes steam{0%{opacity:0;transform:translateY(4px) scaleY(.8)}30%{opacity:.7}100%{opacity:0;transform:translateY(-14px) scaleY(1.25)}}
+.steam{display:inline-flex;gap:5px;align-items:flex-end;height:22px}
+.steam i{width:3px;height:16px;border-radius:3px;background:linear-gradient(to top,transparent,var(--caramel-soft));animation:steam 2.8s ease-in-out infinite}
+.steam i:nth-child(2){animation-delay:.5s;height:20px}.steam i:nth-child(3){animation-delay:1s}
+
+/* ---------- header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:70;padding:18px 0;transition:background .35s,box-shadow .35s,padding .35s}
+header.scrolled{background:rgba(26,39,68,.95);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(26,39,68,.18);padding:11px 0}
+.nav{display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff}
+.brand .bj{width:40px;height:40px;border-radius:11px;background:var(--royal);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:1.5rem;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)}
+.brand .bt{font-family:var(--serif);font-weight:600;font-size:1.2rem;line-height:1;color:#fff}
+.brand .bt small{display:block;font-family:var(--sans);font-weight:600;font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel-soft);margin-top:3px}
+.nav .spacer{flex:1}
+.nav-links{display:none;gap:28px;font-size:.9rem;font-weight:600;color:rgba(246,239,227,.82)}
+.nav-links a:hover{color:#fff}
+@media(min-width:900px){.nav-links{display:flex}}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;padding:130px 0 80px;overflow:hidden;color:var(--cream);
+  background:linear-gradient(125deg,#16223c 0%,#1a2744 48%,#22325a 100%)}
+.hero-bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;opacity:.2}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,#16223c 6%,rgba(22,34,60,.74) 52%,rgba(22,34,60,.45) 100%)}
+.hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
+
+/* logo lockup */
+.logo{display:flex;flex-direction:column;align-items:center}
+.logo .lsteam{margin-bottom:6px}
+.logo .lsteam i{background:linear-gradient(to top,transparent,rgba(233,211,173,.9))}
+.logo .lcoffee{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.5em;font-size:clamp(.8rem,2.4vw,1.05rem);color:var(--caramel-soft);padding-left:.5em}
+.logo .lwith{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.1rem,3vw,1.5rem);color:#fff;opacity:.92;margin:-.1em 0}
+.logo .lj{font-family:var(--serif);font-weight:600;font-size:clamp(5rem,17vw,9rem);line-height:.9;color:#fff;position:relative;
+  text-shadow:0 8px 30px rgba(0,0,0,.3)}
+.logo .lj .cup{position:absolute;right:-.42em;bottom:.16em;width:.36em;height:.36em}
+.logo .lj .cup svg{width:100%;height:100%;stroke:var(--caramel);fill:none;stroke-width:1.6}
+.hero .tagline{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.5rem,4.4vw,2.5rem);color:#fff;margin-top:.3em}
+.hero .sub{font-size:clamp(1rem,2.3vw,1.18rem);color:rgba(246,239,227,.82);margin-top:.9em}
+.best-badge{display:inline-flex;align-items:center;gap:.6em;margin-top:1.6em;padding:.6em 1.3em;border-radius:50px;
+  background:rgba(200,146,74,.16);border:1px solid rgba(233,211,173,.45);font-weight:700;font-size:.9rem;color:var(--caramel-soft)}
+.best-badge .stars{letter-spacing:.1em;color:var(--caramel)}
+.hero-cta{margin-top:2em;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+
+/* entrance */
+.fade{opacity:0;transform:translateY(22px)}
+.go .fade{animation:fadeUp 1s cubic-bezier(.2,.8,.2,1) forwards}
+.go .lj{animation:popIn 1.1s cubic-bezier(.2,1.3,.4,1) forwards;opacity:0}
+@keyframes popIn{0%{opacity:0;transform:scale(.7) translateY(10px)}100%{opacity:1;transform:none}}
+.go .d1{animation-delay:.25s}.go .d2{animation-delay:.45s}.go .d3{animation-delay:.65s}.go .d4{animation-delay:.85s}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+
+/* ---------- scroll reveal ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.r2{transition-delay:.1s}.r3{transition-delay:.2s}.r4{transition-delay:.3s}.r5{transition-delay:.4s}
+
+/* ---------- section heads ---------- */
+.sec-head{max-width:660px;margin-bottom:clamp(40px,5vw,60px)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(2.1rem,5.5vw,3.4rem)}
+.sec-head h2 em{font-style:italic;color:var(--caramel-2)}
+.sec-head p{font-size:1.12rem;margin-top:.6em;color:var(--body)}
+
+/* ---------- story ---------- */
+.story{background:var(--cream)}
+.story-grid{display:grid;gap:clamp(36px,5vw,64px);grid-template-columns:1fr;align-items:center}
+@media(min-width:920px){.story-grid{grid-template-columns:1.05fr .95fr}}
+.story h2{font-size:clamp(2rem,5vw,3rem)}
+.story h2 em{font-style:italic;color:var(--caramel-2)}
+.story p{margin-bottom:1.1em;font-size:1.08rem}
+.story p .hl{color:var(--navy);font-weight:700}
+.jfam{margin-top:1.6em;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow)}
+.jfam .t{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:1.1rem;margin-bottom:.5em}
+.jfam .names{display:flex;flex-wrap:wrap;gap:8px}
+.jfam .names span{font-weight:700;font-size:.84rem;color:var(--royal);background:rgba(45,74,138,.08);border-radius:50px;padding:.4em .9em}
+.story-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);background:linear-gradient(150deg,#243760,#16223c)}
+.story-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s ease}
+.story-photo:hover img{transform:scale(1.05)}
+.story-photo .wall{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(26,39,68,.82);backdrop-filter:blur(4px);color:var(--cream);
+  border-radius:12px;padding:14px 16px;font-size:.86rem}
+.story-photo .wall b{font-family:var(--serif);color:#fff;display:block;font-size:1rem;margin-bottom:2px}
+
+/* ---------- menu ---------- */
+.menu{background:var(--paper)}
+.menu-cols{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:880px){.menu-cols{grid-template-columns:.85fr 1.15fr}}
+.menu-card{background:var(--cream-2);border:1px solid var(--line);border-radius:18px;padding:30px 28px;box-shadow:var(--shadow)}
+.menu-card.coffee{background:linear-gradient(160deg,#1c2a49,#16223c);color:var(--cream);border-color:transparent}
+.menu-card h3{font-size:1.6rem;margin-bottom:.1em;display:flex;align-items:center;gap:.5em}
+.menu-card.coffee h3{color:#fff}
+.menu-card .lead{font-size:.98rem;margin-bottom:1.2em}
+.menu-card.coffee .lead{color:rgba(246,239,227,.78)}
+.coffee-list{list-style:none;display:flex;flex-wrap:wrap;gap:9px}
+.coffee-list li{font-weight:600;font-size:.9rem;color:var(--cream);border:1px solid rgba(233,211,173,.3);border-radius:50px;padding:.45em .95em;background:rgba(255,255,255,.04)}
+.coffee-note{margin-top:1.4em;font-size:.9rem;color:var(--caramel-soft);display:flex;align-items:center;gap:.6em}
+.bakes{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:560px){.bakes{grid-template-columns:1fr 1fr}}
+.bake{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 16px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.bake:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--caramel-soft)}
+.bake .ic{flex:0 0 40px;width:40px;height:40px;border-radius:11px;background:rgba(200,146,74,.14);display:grid;place-items:center;font-size:1.25rem}
+.bake h4{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:1.05rem;line-height:1.2}
+.bake p{font-size:.86rem;color:var(--body);margin-top:.15em}
+.menu-note{text-align:center;margin-top:24px;font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--caramel-2)}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--cream)}
+.tiles{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(min-width:760px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.tile{position:relative;overflow:hidden;border-radius:16px;aspect-ratio:1;background:linear-gradient(150deg,#243760,#16223c)}
+.tile.big{grid-column:span 2;grid-row:span 2;aspect-ratio:1}
+@media(max-width:759px){.tile.big{grid-column:span 2;aspect-ratio:1.4}}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.tile:hover img{transform:scale(1.08)}
+.tile .cap{position:absolute;inset:auto 0 0 0;padding:24px 14px 12px;z-index:2;background:linear-gradient(transparent,rgba(22,34,60,.82));
+  color:#fff;font-family:var(--serif);font-weight:600;font-size:.92rem}
+.tile.noimg img{display:none}
+.tile.noimg::after{content:attr(data-ph);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:14px;
+  font-family:var(--serif);font-style:italic;color:var(--caramel-soft);font-size:.95rem;background:linear-gradient(150deg,#243760,#16223c)}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--paper);text-align:center}
+.award{display:inline-flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:8px}
+.award .ring{width:96px;height:96px;border-radius:50%;border:2px solid var(--caramel);display:grid;place-items:center;background:rgba(200,146,74,.08);position:relative}
+.award .ring .n{font-family:var(--serif);font-weight:600;font-size:2.2rem;color:var(--navy);line-height:1}
+.award .stars{color:var(--caramel);letter-spacing:.12em;font-size:1.1rem}
+.award .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;color:var(--muted)}
+.best-award{display:inline-flex;align-items:center;gap:.6em;margin:18px 0 4px;padding:.6em 1.4em;border-radius:50px;background:var(--navy);color:var(--cream);font-weight:700;font-size:.92rem}
+.best-award svg{width:1.1em;height:1.1em;stroke:var(--caramel);fill:none;stroke-width:2}
+.rcards{display:grid;gap:18px;grid-template-columns:1fr;text-align:left;margin-top:2.4em}
+@media(min-width:680px){.rcards{grid-template-columns:1fr 1fr}}
+.rcard{background:var(--cream-2);border:1px solid var(--line);border-radius:18px;padding:28px 26px;box-shadow:var(--shadow)}
+.rcard .stars{color:var(--caramel);letter-spacing:.1em;font-size:1rem}
+.rcard p{font-family:var(--serif);font-style:italic;font-size:1.18rem;color:var(--ink);line-height:1.5;margin:.6em 0 1em}
+.rcard .by{font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--caramel-2)}
+
+/* ---------- find us ---------- */
+.find{background:var(--navy);color:var(--cream)}
+.find h2{color:#fff}.find h2 em{color:var(--caramel)}
+.find-grid{display:grid;gap:clamp(32px,4vw,52px);grid-template-columns:1fr;margin-top:clamp(30px,4vw,44px)}
+@media(min-width:900px){.find-grid{grid-template-columns:1fr 1fr}}
+.info-row{display:flex;gap:15px;align-items:flex-start;padding:16px 0;border-bottom:1px solid rgba(246,239,227,.12)}
+.info-row:last-of-type{border-bottom:none}
+.info-row .ic{flex:0 0 42px;width:42px;height:42px;border-radius:11px;background:rgba(200,146,74,.18);display:grid;place-items:center}
+.info-row .ic svg{width:20px;height:20px;stroke:var(--caramel);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.info-row .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;color:var(--caramel-soft)}
+.info-row .val{font-size:1.05rem;color:#fff;margin-top:2px}
+.info-row a.val:hover{color:var(--caramel-soft)}
+.info-row .val .closed{color:var(--muted)}
+.hours-note{font-size:.84rem;color:rgba(246,239,227,.6);margin-top:6px;font-style:italic}
+.order-row{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 6px}
+.socials{display:flex;gap:11px;margin-top:20px}
+.socials a{width:46px;height:46px;border-radius:12px;border:1px solid rgba(246,239,227,.2);display:grid;place-items:center;transition:.3s}
+.socials a:hover{border-color:var(--caramel);background:rgba(200,146,74,.16);transform:translateY(-3px)}
+.socials svg{width:21px;height:21px;fill:var(--cream)}
+.map{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(246,239,227,.14);min-height:340px}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:saturate(1.05)}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy-2);color:rgba(246,239,227,.6);padding:40px 0;text-align:center;border-top:1px solid rgba(246,239,227,.1)}
+footer .brand{justify-content:center;margin-bottom:12px}
+footer p{font-size:.86rem;margin-top:8px}
+footer a:hover{color:var(--caramel-soft)}
+
+/* ---------- sticky mobile ---------- */
+.sticky{position:fixed;inset:auto 0 0 0;z-index:65;padding:10px 14px env(safe-area-inset-bottom);background:rgba(26,39,68,.96);
+  backdrop-filter:blur(10px);border-top:1px solid rgba(246,239,227,.14);display:flex;gap:10px}
+.sticky .btn{flex:1;justify-content:center}
+@media(min-width:760px){.sticky{display:none}}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal,.fade{opacity:1;transform:none}.lj{opacity:1!important}.steam i{animation:none;opacity:.5}.hero-bg{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#hero" class="brand" aria-label="Coffee with J">
+      <span class="bj">J</span>
+      <span class="bt">Coffee with J<small>Invercargill</small></span>
+    </a>
+    <span class="spacer"></span>
+    <nav class="nav-links">
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#find">Find Us</a>
+    </nav>
+    <a href="#find" class="btn btn-primary" style="padding:.7em 1.3em;font-size:.85rem">Visit us</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1600&q=70" alt="" loading="eager" onerror="this.style.display='none'">
+  <div class="wrap">
+    <div class="logo">
+      <span class="lsteam steam fade"><i></i><i></i><i></i></span>
+      <span class="lcoffee fade d1">Coffee</span>
+      <span class="lwith fade d1">with</span>
+      <span class="lj">J<span class="cup"><svg viewBox="0 0 24 24"><path d="M4 9h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z"/><path d="M17 10h2.5a2.5 2.5 0 0 1 0 5H17"/></svg></span></span>
+    </div>
+    <p class="tagline fade d2">Every sip tells a story</p>
+    <p class="sub fade d3">Specialty coffee &amp; fresh-baked treats · Invercargill</p>
+    <div class="best-badge fade d3"><span class="stars">★★★★★</span> Best Coffee in Invercargill</div>
+    <div class="hero-cta fade d4">
+      <a href="#menu" class="btn btn-primary">See our menu</a>
+      <a href="#find" class="btn btn-light">Find us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR STORY ============ -->
+<section class="section story" id="story">
+  <div class="wrap story-grid">
+    <div>
+      <span class="eyebrow reveal">Our story</span>
+      <h2 class="reveal r2">A Filipino family, a long way from home — and a whole lot of <em>heart</em></h2>
+      <p class="reveal r3">Our family travelled halfway across the world — from the Philippines, by way of North Carolina — to <span class="hl">"the far, far end of the map"</span> here in Invercargill. We opened our doors on the 4th of July, and we've been pouring our hearts into every cup and every bake ever since.</p>
+      <p class="reveal r3">Owner and baker <span class="hl">Jexter "Jex" Aguiluz</span> is up at <span class="hl">4:30am</span> every morning, making everything fresh by hand before the doors open. It's a true family affair — and yes, we're all "J"s.</p>
+      <div class="jfam reveal r3">
+        <div class="t">The family behind the J ☕</div>
+        <div class="names"><span>Jex</span><span>Jacque</span><span>Jeano</span><span>Jeashua</span><span>Jeaster</span></div>
+      </div>
+    </div>
+    <div class="story-photo reveal r2">
+      <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=900&q=75" alt="Inside Coffee with J — warm, family-run café" loading="lazy" onerror="this.closest('.story-photo').classList.add('noimg');this.remove()">
+      <div class="wall"><b>The Great Wall of J</b>A hand-painted mural of positive words and affirmations that Jex and his son spent two weeks creating — the beating heart of the café.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What's on</span>
+      <h2>Coffee, and bakes worth <em>queuing</em> for</h2>
+      <p>Carefully brewed specialty coffee and a Filipino-inspired bakery — all made fresh, by hand, every single morning.</p>
+    </div>
+    <div class="menu-cols">
+      <div class="menu-card coffee reveal">
+        <h3><span class="steam" style="height:18px"><i></i><i></i><i></i></span> Coffee</h3>
+        <p class="lead">Quality beans, brewed with care. From a velvety flat white to a rich mocha — pulled just right, every time.</p>
+        <ul class="coffee-list">
+          <li>Flat White</li><li>Mocha</li><li>Latte</li><li>Cappuccino</li><li>Long Black</li><li>Espresso</li><li>Hot Chocolate</li><li>Chai</li>
+        </ul>
+        <div class="coffee-note">☕ "Best coffee in Invercargill" — and we don't say it lightly.</div>
+      </div>
+      <div class="menu-card reveal r2">
+        <h3>🍩 Signature Bakes</h3>
+        <p class="lead">Our pride and joy — fresh-baked daily with a Filipino bakery heart. They sell out, so get in early!</p>
+        <div class="bakes">
+          <div class="bake"><span class="ic">🍩</span><div><h4>Classic Doughnuts</h4><p>With our signature jaunty dob of jam on top.</p></div></div>
+          <div class="bake"><span class="ic">💜</span><div><h4>Ube Cream Buns</h4><p>Filipino purple yam, sweet and silky.</p></div></div>
+          <div class="bake"><span class="ic">🥐</span><div><h4>Pistachio Cream Buns</h4><p>Nutty, fluffy and a total fan favourite.</p></div></div>
+          <div class="bake"><span class="ic">🥥</span><div><h4>Coco Cream Donuts</h4><p>Coconut cream, dreamy and light.</p></div></div>
+          <div class="bake"><span class="ic">🍪</span><div><h4>Oreo Cookies &amp; Cream</h4><p>Crushed cookies through rich cream.</p></div></div>
+          <div class="bake"><span class="ic">🌀</span><div><h4>Cinnamon Buns</h4><p>Finished with melted butter — a fan favourite.</p></div></div>
+          <div class="bake"><span class="ic">🥐</span><div><h4>Croissants</h4><p>Buttery, flaky, golden each morning.</p></div></div>
+          <div class="bake"><span class="ic">🥭</span><div><h4>Peach-Mango Pie</h4><p>Plus powdered-sugar filled donuts &amp; more.</p></div></div>
+        </div>
+        <p class="menu-note">Fresh-baked daily — when they're gone, they're gone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">A little look</span>
+      <h2>Made fresh, made with <em>love</em></h2>
+      <p>A taste of what's waiting for you. Real Coffee with J photos coming soon.</p>
+    </div>
+    <div class="tiles">
+      <figure class="tile big reveal" data-ph="Fresh doughnuts"><img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?auto=format&fit=crop&w=900&q=72" alt="Fresh glazed doughnuts" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Fresh doughnuts daily</div></figure>
+      <figure class="tile reveal r2" data-ph="Coffee"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=72" alt="Latte art coffee" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Specialty coffee</div></figure>
+      <figure class="tile reveal r3" data-ph="Cinnamon buns"><img src="https://images.unsplash.com/photo-1509365390695-33aee754301f?auto=format&fit=crop&w=600&q=72" alt="Cinnamon buns" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Cinnamon buns</div></figure>
+      <figure class="tile reveal r2" data-ph="Cream buns"><img src="https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=600&q=72" alt="Cream-filled buns" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Cream buns</div></figure>
+      <figure class="tile reveal r3" data-ph="Croissants"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=72" alt="Fresh croissants" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Buttery croissants</div></figure>
+      <figure class="tile reveal r4" data-ph="Cozy café"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=72" alt="Cozy café seating" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Pull up a chair</div></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="award reveal">
+      <div class="ring"><span class="n">5.0</span></div>
+      <div class="stars">★★★★★</div>
+      <div class="lbl">100% would recommend</div>
+    </div>
+    <div class="reveal r2"><span class="best-award"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4ZM7 6H5a2 2 0 0 0 0 4h2M17 6h2a2 2 0 0 1 0 4h-2"/></svg> Voted Best Coffee in Invercargill</span></div>
+    <div class="rcards">
+      <div class="rcard reveal r2"><div class="stars">★★★★★</div><p>The pistachio bun and a mocha were exactly what I needed — honestly the best little pick-me-up in town. I'll be back!</p><div class="by">— A very happy local</div></div>
+      <div class="rcard reveal r3"><div class="stars">★★★★★</div><p>Came in just for a coffee and walked out completely won over by a donut. The warmth of this place is something else.</p><div class="by">— First-timer, now a regular</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIND US ============ -->
+<section class="section find" id="find">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:0">
+      <span class="eyebrow" style="color:var(--caramel-soft)">Come say hi</span>
+      <h2>Find us in <em>Invercargill</em></h2>
+    </div>
+    <div class="find-grid">
+      <div class="reveal r2">
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <div><div class="lbl">Where</div><a class="val" href="https://www.google.com/maps/dir/?api=1&destination=2%2F302+Yarrow+Street,+Richmond,+Invercargill+9810" target="_blank" rel="noopener">2/302 Yarrow Street, Richmond, Invercargill 9810</a><div class="hours-note">Corner of Yarrow &amp; Lindisfarne Streets</div></div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <div><div class="lbl">Hours</div>
+            <div class="val">Tue–Fri · 7:30am – 4:00pm</div>
+            <div class="val">Saturday · 8:00am – 3:00pm</div>
+            <div class="val"><span class="closed">Sunday &amp; Monday · Closed</span></div>
+            <div class="hours-note">Hours can change — check our Facebook for the latest.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+          <div><div class="lbl">Call us</div><a class="val" href="tel:0204933531">020 493 3531</a></div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div><div class="lbl">Email</div><a class="val" href="mailto:coffeewithjex@gmail.com">coffeewithjex@gmail.com</a></div>
+        </div>
+        <div class="order-row">
+          <a class="btn btn-primary" href="https://www.ubereats.com/nz" target="_blank" rel="noopener">Order on Uber Eats</a>
+          <a class="btn btn-ghost" style="color:var(--cream);border-color:rgba(246,239,227,.4)" href="https://www.delivereasy.co.nz" target="_blank" rel="noopener">Delivereasy</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/coffeewithjex" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.28-.13-2.43-.13-2.4 0-4.04 1.47-4.04 4.16v2.32H7.5V13h2.73v8h3.27Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/coffeewithjex" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.9.07s-3.63 0-4.9-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.14 0-3.51.01-4.75.07-.9.04-1.38.19-1.7.32-.43.16-.73.36-1.05.68-.32.32-.52.62-.68 1.05-.13.32-.28.8-.32 1.7C4.01 8.49 4 8.86 4 12s.01 3.51.07 4.75c.04.9.19 1.38.32 1.7.16.43.36.73.68 1.05.32.32.62.52 1.05.68.32.13.8.28 1.7.32 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.9-.04 1.38-.19 1.7-.32.43-.16.73-.36 1.05-.68.32-.32.52-.62.68-1.05.13-.32.28-.8.32-1.7.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.19-1.38-.32-1.7a2.8 2.8 0 0 0-.68-1.05 2.8 2.8 0 0 0-1.05-.68c-.32-.13-.8-.28-1.7-.32C15.51 4.01 15.14 4 12 4Zm0 3.06A4.94 4.94 0 1 1 12 17a4.94 4.94 0 0 1 0-9.94Zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28Zm5.14-.95a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="map reveal r3">
+        <iframe title="Map to Coffee with J, Invercargill" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=2%2F302%20Yarrow%20Street,%20Richmond,%20Invercargill%209810&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <a href="#hero" class="brand"><span class="bj">J</span><span class="bt" style="color:#fff">Coffee with J</span></a>
+    <p>Every sip tells a story · Specialty coffee &amp; fresh-baked treats · Invercargill</p>
+    <p>2/302 Yarrow Street, Richmond · <a href="tel:0204933531">020 493 3531</a> · <a href="https://www.facebook.com/coffeewithjex" target="_blank" rel="noopener">Facebook</a></p>
+    <p>© <span id="yr"></span> Coffee with J</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="#menu" class="btn btn-navy" style="color:var(--cream)">Menu</a>
+  <a href="#find" class="btn btn-primary">Find us</a>
+</div>
+
+<script>
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  addEventListener('load', () => window.scrollTo(0, 0));
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  requestAnimationFrame(() => document.body.classList.add('go'));
+
+  const header = document.getElementById('top');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 16);
+  onScroll(); addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .14, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

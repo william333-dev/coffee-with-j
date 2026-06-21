@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Coffee with J — Edit your site</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a2744'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%23f6efe3' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2744;--navy2:#13203a;--royal:#2d4a8a;--cream:#f6efe3;--paper:#fffdf8;--field:#fbf6ec;
+  --caramel:#c8924a;--caramel2:#b07c38;--ink:#22293a;--muted:#8a93a6;--line:#ece2d2;--err:#c0392b;
+  --serif:'Fraunces',Georgia,serif;--sans:'Nunito Sans',-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2{font-family:var(--serif);color:var(--navy);font-weight:600}
+.hidden{display:none!important}
+a{color:var(--caramel2)}
+.wrap{max-width:780px;margin:0 auto;padding:24px 20px 100px}
+label{display:block;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;color:var(--muted);margin:16px 0 6px}
+input,textarea{width:100%;background:#fff;border:1px solid var(--line);border-radius:9px;color:var(--ink);font:inherit;font-size:1rem;padding:11px 13px;transition:border-color .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--caramel)}
+textarea{resize:vertical;min-height:58px;line-height:1.5}
+.btn{font-family:var(--sans);font-weight:700;font-size:.92rem;padding:.85em 1.6em;border-radius:50px;cursor:pointer;border:2px solid transparent;transition:transform .2s,background .2s}
+.btn-primary{background:var(--caramel);color:#fff;box-shadow:0 8px 22px rgba(200,146,74,.3)}
+.btn-primary:hover{background:var(--caramel2);transform:translateY(-2px)}
+.btn-primary:disabled{opacity:.5;cursor:default;transform:none}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--caramel)}
+.notice{border-radius:9px;padding:10px 13px;font-size:.92rem;margin:12px 0}
+.notice.err{background:#fdecea;border:1px solid #f3c0bc;color:var(--err)}
+
+.login-shell{min-height:100svh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#16223c,#1a2744)}
+.card{width:100%;max-width:420px;background:var(--paper);border-radius:18px;padding:36px 30px;box-shadow:0 30px 70px rgba(0,0,0,.4);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--caramel)}
+.card .bj{width:54px;height:54px;border-radius:14px;background:var(--royal);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:2rem;color:#fff;margin:0 auto 12px}
+.card h1{text-align:center;font-size:1.5rem}
+.card .sub{text-align:center;color:var(--muted);font-size:.88rem;margin:4px 0 20px}
+
+.topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.topbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-weight:600;font-size:1.4rem;color:var(--navy)}
+.topbar .brand .bj{width:34px;height:34px;border-radius:10px;background:var(--royal);display:grid;place-items:center;color:#fff;font-size:1.2rem}
+.topbar .spacer{flex:1}
+.who{color:var(--muted);font-size:.82rem}
+.lead{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px;margin-top:18px;box-shadow:0 2px 10px rgba(26,39,68,.04)}
+.panel h2{font-size:1.3rem;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:4px}
+.bake-block{border:1px solid var(--line);border-radius:11px;padding:14px;margin-top:14px}
+.photo-block{display:flex;gap:16px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.photo-thumb{width:120px;height:84px;border-radius:10px;object-fit:cover;border:1px solid var(--line);background:var(--field);flex:0 0 auto}
+.photo-ph{width:120px;height:84px;border-radius:10px;border:1px dashed var(--line);background:var(--field);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:.8rem;color:var(--muted);flex:0 0 auto;text-align:center;padding:6px}
+.photo-block .pf{flex:1;min-width:200px}
+.photo-block .pf .name{font-weight:700;font-size:.82rem;color:var(--navy)}
+.upstate{font-size:.82rem;color:var(--muted);margin-top:4px}
+input[type=file]{font-size:.84rem;padding:8px;margin-top:6px}
+.savebar{position:sticky;bottom:0;background:linear-gradient(transparent,var(--paper) 42%);padding:22px 0 6px;margin-top:26px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.savebar .spacer{flex:1}
+.muted{color:var(--muted);font-size:.82rem}
+</style>
+</head>
+<body>
+
+<!-- ===== LOGIN ===== -->
+<div id="view-login" class="login-shell">
+  <form class="card" id="login-form">
+    <div class="bj">J</div>
+    <h1>Coffee with J</h1>
+    <div class="sub">Café website editor</div>
+    <div id="login-error" class="notice err hidden"></div>
+    <label for="email">Email</label>
+    <input id="email" type="email" required autocomplete="username" placeholder="you@example.com">
+    <label for="password">Password</label>
+    <input id="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+    <button class="btn btn-primary" type="submit" id="login-btn" style="width:100%;margin-top:22px">Sign in</button>
+  </form>
+</div>
+
+<!-- ===== EDITOR ===== -->
+<main id="view-editor" class="wrap hidden">
+  <div class="topbar">
+    <span class="brand"><span class="bj">J</span>Coffee with J</span>
+    <span class="spacer"></span>
+    <span class="who" id="who"></span>
+    <a class="btn btn-ghost" id="view-site" href="../" target="_blank" style="text-decoration:none">View site ↗</a>
+    <button class="btn btn-ghost" id="logout">Log out</button>
+  </div>
+  <p class="lead">Change any text or photo below, then press <b>Save changes</b>. Your live site updates straight away.</p>
+  <div id="editor-error" class="notice err hidden"></div>
+
+  <div class="panel">
+    <h2>Headline &amp; contact</h2>
+    <div id="text-fields"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Hours</h2>
+    <div id="hours-fields"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Bakery menu</h2>
+    <div id="bakes"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Photos</h2>
+    <div id="photos"></div>
+    <p class="muted" style="margin-top:14px">JPG, PNG or WebP, up to 6&nbsp;MB. Your real coffee &amp; bakery photos will look amazing here. A new photo replaces the placeholder on save.</p>
+  </div>
+
+  <div class="savebar">
+    <button class="btn btn-primary" id="save">Save changes</button>
+    <span id="save-msg" class="muted"></span>
+    <span class="spacer"></span>
+    <button class="btn btn-ghost" id="changepw">Change password</button>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const CFG = {
+  url: 'https://nkvezionyeeyidhtpjzy.supabase.co',
+  anon: 'sb_publishable_-9l89xivt1ntbMtRetEHmQ_8lEU7qKk',
+  bucket: 'cms-coffee-with-j',
+  id: 'coffee-with-j',
+};
+const sb = supabase.createClient(CFG.url, CFG.anon);
+
+const DEFAULTS = {
+  tagline: 'Every sip tells a story',
+  subline: 'Specialty coffee & fresh-baked treats · Invercargill',
+  phone: '020 493 3531',
+  email: 'coffeewithjex@gmail.com',
+  address: '2/302 Yarrow Street, Richmond, Invercargill 9810',
+  'hours-weekday': 'Tue–Fri · 7:30am – 4:00pm',
+  'hours-sat': 'Saturday · 8:00am – 3:00pm',
+  'hours-closed': 'Sunday & Monday · Closed',
+  bakes: [
+    { t: 'Classic Doughnuts', d: 'With our signature jaunty dob of jam on top.' },
+    { t: 'Ube Cream Buns', d: 'Filipino purple yam, sweet and silky.' },
+    { t: 'Pistachio Cream Buns', d: 'Nutty, fluffy and a total fan favourite.' },
+    { t: 'Coco Cream Donuts', d: 'Coconut cream, dreamy and light.' },
+    { t: 'Oreo Cookies & Cream', d: 'Crushed cookies through rich cream.' },
+    { t: 'Cinnamon Buns', d: 'Finished with melted butter — a fan favourite.' },
+    { t: 'Croissants', d: 'Buttery, flaky, golden each morning.' },
+    { t: 'Peach-Mango Pie', d: 'Plus powdered-sugar filled donuts & more.' },
+  ],
+  photos: { hero: '', story: '', gallery0: '', gallery1: '', gallery2: '', gallery3: '', gallery4: '', gallery5: '' },
+};
+
+const TEXT_FIELDS = [
+  { key: 'tagline', label: 'Tagline', area: true },
+  { key: 'subline', label: 'Sub-line (under the tagline)' },
+  { key: 'phone', label: 'Phone' },
+  { key: 'email', label: 'Email' },
+  { key: 'address', label: 'Address' },
+];
+const HOURS_FIELDS = [
+  { key: 'hours-weekday', label: 'Weekday hours' },
+  { key: 'hours-sat', label: 'Saturday hours' },
+  { key: 'hours-closed', label: 'Closed days' },
+];
+const PHOTOS = [
+  { key: 'hero', label: 'Hero background' },
+  { key: 'story', label: 'Story / café photo' },
+  { key: 'gallery0', label: 'Gallery 1 — doughnuts (big)' },
+  { key: 'gallery1', label: 'Gallery 2 — coffee' },
+  { key: 'gallery2', label: 'Gallery 3 — cinnamon buns' },
+  { key: 'gallery3', label: 'Gallery 4 — cream buns' },
+  { key: 'gallery4', label: 'Gallery 5 — croissants' },
+  { key: 'gallery5', label: 'Gallery 6 — café' },
+];
+
+const $ = (id) => document.getElementById(id);
+let state = null, pendingUploads = {};
+
+function show(v){ $('view-login').classList.toggle('hidden', v!=='login'); $('view-editor').classList.toggle('hidden', v!=='editor'); }
+function err(el, msg){ const e=$(el); if(!msg){e.classList.add('hidden');return;} e.textContent=msg; e.classList.remove('hidden'); }
+function escq(s){ return String(s == null ? '' : s).replace(/"/g, '&quot;'); }
+function escHtml(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+$('login-form').addEventListener('submit', async (e) => {
+  e.preventDefault(); err('login-error','');
+  $('login-btn').disabled = true; $('login-btn').textContent = 'Signing in…';
+  const { error } = await sb.auth.signInWithPassword({ email: $('email').value.trim(), password: $('password').value });
+  $('login-btn').disabled = false; $('login-btn').textContent = 'Sign in';
+  if (error) return err('login-error', error.message);
+  boot();
+});
+$('logout').addEventListener('click', async () => { await sb.auth.signOut(); location.reload(); });
+$('changepw').addEventListener('click', async () => {
+  const pw = prompt('New password (min 8 characters):'); if (!pw) return;
+  if (pw.length < 8) return alert('Too short — use at least 8 characters.');
+  const { error } = await sb.auth.updateUser({ password: pw });
+  alert(error ? ('Could not change password: ' + error.message) : 'Password updated.');
+});
+
+async function boot(){
+  const { data:{ session } } = await sb.auth.getSession();
+  if (!session) return show('login');
+  $('who').textContent = session.user.email;
+  show('editor');
+  const { data, error } = await sb.from('cms_content').select('data').eq('id', CFG.id).maybeSingle();
+  if (error) err('editor-error', 'Could not load content: ' + error.message);
+  const d = (data && data.data) || {};
+  state = Object.assign({}, DEFAULTS, d);
+  state.photos = Object.assign({}, DEFAULTS.photos, d.photos || {});
+  state.bakes = (DEFAULTS.bakes).map((b, i) => Object.assign({}, b, (d.bakes && d.bakes[i]) || {}));
+  render();
+}
+
+function render(){
+  $('text-fields').innerHTML = TEXT_FIELDS.map((f) =>
+    `<label>${f.label}</label>` + (f.area
+      ? `<textarea data-k="${f.key}">${escHtml(state[f.key]||'')}</textarea>`
+      : `<input data-k="${f.key}" type="text" value="${escq(state[f.key]||'')}">`)).join('');
+  $('hours-fields').innerHTML = HOURS_FIELDS.map((f) =>
+    `<label>${f.label}</label><input data-k="${f.key}" type="text" value="${escq(state[f.key]||'')}">`).join('');
+  $('bakes').innerHTML = state.bakes.map((b, i) =>
+    `<div class="bake-block"><label>Item ${i+1} — name</label>` +
+    `<input data-bake="${i}" data-f="t" type="text" value="${escq(b.t||'')}">` +
+    `<label>Description</label><textarea data-bake="${i}" data-f="d">${escHtml(b.d||'')}</textarea></div>`).join('');
+  $('photos').innerHTML = '';
+  PHOTOS.forEach(({key,label}) => {
+    const cur = state.photos[key];
+    const row = document.createElement('div'); row.className = 'photo-block';
+    row.innerHTML = (cur ? `<img class="photo-thumb" data-prev="${key}" src="${escq(cur)}" alt="">` : `<div class="photo-ph" data-prev="${key}">${label}</div>`) +
+      `<div class="pf"><div class="name">${label}</div><input type="file" accept="image/*" data-up="${key}"><div class="upstate" data-state="${key}">${cur?'':'Using current site image'}</div></div>`;
+    $('photos').appendChild(row);
+    row.querySelector('[data-up]').addEventListener('change', (e) => onPick(key, e.target.files[0]));
+  });
+}
+
+function onPick(key, file){
+  if (!file) return;
+  pendingUploads[key] = file;
+  const url = URL.createObjectURL(file);
+  const prev = document.querySelector('[data-prev="'+key+'"]');
+  if (prev) { if (prev.tagName === 'IMG') prev.src = url;
+    else { const img=document.createElement('img'); img.className='photo-thumb'; img.dataset.prev=key; img.src=url; prev.replaceWith(img); } }
+  document.querySelector('[data-state="'+key+'"]').textContent = 'New photo ready — press Save to publish.';
+}
+
+$('save').addEventListener('click', save);
+async function save(){
+  err('editor-error','');
+  const btn = $('save'); btn.disabled = true; btn.textContent = 'Saving…'; $('save-msg').textContent = '';
+  try {
+    document.querySelectorAll('[data-k]').forEach((el) => { state[el.dataset.k] = el.value.trim(); });
+    document.querySelectorAll('[data-bake]').forEach((el) => { state.bakes[+el.dataset.bake][el.dataset.f] = el.value.trim(); });
+    for (const key of Object.keys(pendingUploads)) {
+      const file = pendingUploads[key];
+      const ext = (file.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g,'') || 'jpg';
+      const path = key + '-' + Date.now() + '.' + ext;
+      $('save-msg').textContent = 'Uploading ' + key + '…';
+      const up = await sb.storage.from(CFG.bucket).upload(path, file, { upsert: true, cacheControl: '3600' });
+      if (up.error) throw new Error('Photo upload failed: ' + up.error.message);
+      state.photos[key] = sb.storage.from(CFG.bucket).getPublicUrl(path).data.publicUrl;
+    }
+    pendingUploads = {};
+    const { error } = await sb.from('cms_content')
+      .upsert({ id: CFG.id, data: state, updated_at: new Date().toISOString() }, { onConflict: 'id' });
+    if (error) throw new Error(error.message);
+    $('save-msg').innerHTML = '✓ Saved — <a href="../" target="_blank">view your live site</a>';
+    document.querySelectorAll('[data-state]').forEach(e => { if(/ready/i.test(e.textContent)) e.textContent=''; });
+  } catch (e) {
+    err('editor-error', e.message); $('save-msg').textContent = '';
+  } finally {
+    btn.disabled = false; btn.textContent = 'Save changes';
+  }
+}
+
+sb.auth.getSession().then(({ data:{ session } }) => session ? boot() : show('login'));
+</script>
+</body>
+</html>

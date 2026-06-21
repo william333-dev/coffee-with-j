@@ -245,7 +245,7 @@ footer a:hover{color:var(--caramel-soft)}
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
-  <img class="hero-bg" src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1600&q=70" alt="" loading="eager" onerror="this.style.display='none'">
+  <img class="hero-bg" data-cms-img="hero" src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1600&q=70" alt="" loading="eager" onerror="this.style.display='none'">
   <div class="wrap">
     <div class="logo">
       <span class="lsteam steam fade"><i></i><i></i><i></i></span>
@@ -253,8 +253,8 @@ footer a:hover{color:var(--caramel-soft)}
       <span class="lwith fade d1">with</span>
       <span class="lj">J<span class="cup"><svg viewBox="0 0 24 24"><path d="M4 9h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z"/><path d="M17 10h2.5a2.5 2.5 0 0 1 0 5H17"/></svg></span></span>
     </div>
-    <p class="tagline fade d2">Every sip tells a story</p>
-    <p class="sub fade d3">Specialty coffee &amp; fresh-baked treats · Invercargill</p>
+    <p class="tagline fade d2" data-cms="tagline">Every sip tells a story</p>
+    <p class="sub fade d3" data-cms="subline">Specialty coffee &amp; fresh-baked treats · Invercargill</p>
     <div class="best-badge fade d3"><span class="stars">★★★★★</span> Best Coffee in Invercargill</div>
     <div class="hero-cta fade d4">
       <a href="#menu" class="btn btn-primary">See our menu</a>
@@ -277,7 +277,7 @@ footer a:hover{color:var(--caramel-soft)}
       </div>
     </div>
     <div class="story-photo reveal r2">
-      <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=900&q=75" alt="Inside Coffee with J — warm, family-run café" loading="lazy" onerror="this.closest('.story-photo').classList.add('noimg');this.remove()">
+      <img data-cms-img="story" src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=900&q=75" alt="Inside Coffee with J — warm, family-run café" loading="lazy" onerror="this.closest('.story-photo').classList.add('noimg');this.remove()">
       <div class="wall"><b>The Great Wall of J</b>A hand-painted mural of positive words and affirmations that Jex and his son spent two weeks creating — the beating heart of the café.</div>
     </div>
   </div>
@@ -304,14 +304,14 @@ footer a:hover{color:var(--caramel-soft)}
         <h3>🍩 Signature Bakes</h3>
         <p class="lead">Our pride and joy — fresh-baked daily with a Filipino bakery heart. They sell out, so get in early!</p>
         <div class="bakes">
-          <div class="bake"><span class="ic">🍩</span><div><h4>Classic Doughnuts</h4><p>With our signature jaunty dob of jam on top.</p></div></div>
-          <div class="bake"><span class="ic">💜</span><div><h4>Ube Cream Buns</h4><p>Filipino purple yam, sweet and silky.</p></div></div>
-          <div class="bake"><span class="ic">🥐</span><div><h4>Pistachio Cream Buns</h4><p>Nutty, fluffy and a total fan favourite.</p></div></div>
-          <div class="bake"><span class="ic">🥥</span><div><h4>Coco Cream Donuts</h4><p>Coconut cream, dreamy and light.</p></div></div>
-          <div class="bake"><span class="ic">🍪</span><div><h4>Oreo Cookies &amp; Cream</h4><p>Crushed cookies through rich cream.</p></div></div>
-          <div class="bake"><span class="ic">🌀</span><div><h4>Cinnamon Buns</h4><p>Finished with melted butter — a fan favourite.</p></div></div>
-          <div class="bake"><span class="ic">🥐</span><div><h4>Croissants</h4><p>Buttery, flaky, golden each morning.</p></div></div>
-          <div class="bake"><span class="ic">🥭</span><div><h4>Peach-Mango Pie</h4><p>Plus powdered-sugar filled donuts &amp; more.</p></div></div>
+          <div class="bake"><span class="ic">🍩</span><div><h4 data-cms="bake0-title">Classic Doughnuts</h4><p data-cms="bake0-desc">With our signature jaunty dob of jam on top.</p></div></div>
+          <div class="bake"><span class="ic">💜</span><div><h4 data-cms="bake1-title">Ube Cream Buns</h4><p data-cms="bake1-desc">Filipino purple yam, sweet and silky.</p></div></div>
+          <div class="bake"><span class="ic">🥐</span><div><h4 data-cms="bake2-title">Pistachio Cream Buns</h4><p data-cms="bake2-desc">Nutty, fluffy and a total fan favourite.</p></div></div>
+          <div class="bake"><span class="ic">🥥</span><div><h4 data-cms="bake3-title">Coco Cream Donuts</h4><p data-cms="bake3-desc">Coconut cream, dreamy and light.</p></div></div>
+          <div class="bake"><span class="ic">🍪</span><div><h4 data-cms="bake4-title">Oreo Cookies &amp; Cream</h4><p data-cms="bake4-desc">Crushed cookies through rich cream.</p></div></div>
+          <div class="bake"><span class="ic">🌀</span><div><h4 data-cms="bake5-title">Cinnamon Buns</h4><p data-cms="bake5-desc">Finished with melted butter — a fan favourite.</p></div></div>
+          <div class="bake"><span class="ic">🥐</span><div><h4 data-cms="bake6-title">Croissants</h4><p data-cms="bake6-desc">Buttery, flaky, golden each morning.</p></div></div>
+          <div class="bake"><span class="ic">🥭</span><div><h4 data-cms="bake7-title">Peach-Mango Pie</h4><p data-cms="bake7-desc">Plus powdered-sugar filled donuts &amp; more.</p></div></div>
         </div>
         <p class="menu-note">Fresh-baked daily — when they're gone, they're gone.</p>
       </div>
@@ -328,12 +328,12 @@ footer a:hover{color:var(--caramel-soft)}
       <p>A taste of what's waiting for you. Real Coffee with J photos coming soon.</p>
     </div>
     <div class="tiles">
-      <figure class="tile big reveal" data-ph="Fresh doughnuts"><img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?auto=format&fit=crop&w=900&q=72" alt="Fresh glazed doughnuts" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Fresh doughnuts daily</div></figure>
-      <figure class="tile reveal r2" data-ph="Coffee"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=72" alt="Latte art coffee" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Specialty coffee</div></figure>
-      <figure class="tile reveal r3" data-ph="Cinnamon buns"><img src="https://images.unsplash.com/photo-1509365390695-33aee754301f?auto=format&fit=crop&w=600&q=72" alt="Cinnamon buns" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Cinnamon buns</div></figure>
-      <figure class="tile reveal r2" data-ph="Cream buns"><img src="https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=600&q=72" alt="Cream-filled buns" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Cream buns</div></figure>
-      <figure class="tile reveal r3" data-ph="Croissants"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=72" alt="Fresh croissants" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Buttery croissants</div></figure>
-      <figure class="tile reveal r4" data-ph="Cozy café"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=72" alt="Cozy café seating" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Pull up a chair</div></figure>
+      <figure class="tile big reveal" data-ph="Fresh doughnuts"><img data-cms-img="gallery0" src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?auto=format&fit=crop&w=900&q=72" alt="Fresh glazed doughnuts" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Fresh doughnuts daily</div></figure>
+      <figure class="tile reveal r2" data-ph="Coffee"><img data-cms-img="gallery1" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=72" alt="Latte art coffee" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Specialty coffee</div></figure>
+      <figure class="tile reveal r3" data-ph="Cinnamon buns"><img data-cms-img="gallery2" src="https://images.unsplash.com/photo-1509365390695-33aee754301f?auto=format&fit=crop&w=600&q=72" alt="Cinnamon buns" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Cinnamon buns</div></figure>
+      <figure class="tile reveal r2" data-ph="Cream buns"><img data-cms-img="gallery3" src="https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=600&q=72" alt="Cream-filled buns" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Cream buns</div></figure>
+      <figure class="tile reveal r3" data-ph="Croissants"><img data-cms-img="gallery4" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=72" alt="Fresh croissants" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Buttery croissants</div></figure>
+      <figure class="tile reveal r4" data-ph="Cozy café"><img data-cms-img="gallery5" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=72" alt="Cozy café seating" loading="lazy" onerror="this.closest('.tile').classList.add('noimg')"><div class="cap">Pull up a chair</div></figure>
     </div>
   </div>
 </section>
@@ -365,24 +365,24 @@ footer a:hover{color:var(--caramel-soft)}
       <div class="reveal r2">
         <div class="info-row">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-          <div><div class="lbl">Where</div><a class="val" href="https://www.google.com/maps/dir/?api=1&destination=2%2F302+Yarrow+Street,+Richmond,+Invercargill+9810" target="_blank" rel="noopener">2/302 Yarrow Street, Richmond, Invercargill 9810</a><div class="hours-note">Corner of Yarrow &amp; Lindisfarne Streets</div></div>
+          <div><div class="lbl">Where</div><a class="val" href="https://www.google.com/maps/dir/?api=1&destination=2%2F302+Yarrow+Street,+Richmond,+Invercargill+9810" target="_blank" rel="noopener" data-cms="address">2/302 Yarrow Street, Richmond, Invercargill 9810</a><div class="hours-note">Corner of Yarrow &amp; Lindisfarne Streets</div></div>
         </div>
         <div class="info-row">
           <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
           <div><div class="lbl">Hours</div>
-            <div class="val">Tue–Fri · 7:30am – 4:00pm</div>
-            <div class="val">Saturday · 8:00am – 3:00pm</div>
-            <div class="val"><span class="closed">Sunday &amp; Monday · Closed</span></div>
+            <div class="val" data-cms="hours-weekday">Tue–Fri · 7:30am – 4:00pm</div>
+            <div class="val" data-cms="hours-sat">Saturday · 8:00am – 3:00pm</div>
+            <div class="val"><span class="closed" data-cms="hours-closed">Sunday &amp; Monday · Closed</span></div>
             <div class="hours-note">Hours can change — check our Facebook for the latest.</div>
           </div>
         </div>
         <div class="info-row">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
-          <div><div class="lbl">Call us</div><a class="val" href="tel:0204933531">020 493 3531</a></div>
+          <div><div class="lbl">Call us</div><a class="val" href="tel:0204933531" data-cms="phone">020 493 3531</a></div>
         </div>
         <div class="info-row">
           <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg></span>
-          <div><div class="lbl">Email</div><a class="val" href="mailto:coffeewithjex@gmail.com">coffeewithjex@gmail.com</a></div>
+          <div><div class="lbl">Email</div><a class="val" href="mailto:coffeewithjex@gmail.com" data-cms="email">coffeewithjex@gmail.com</a></div>
         </div>
         <div class="order-row">
           <a class="btn btn-primary" href="https://www.ubereats.com/nz" target="_blank" rel="noopener">Order on Uber Eats</a>
@@ -410,7 +410,7 @@ footer a:hover{color:var(--caramel-soft)}
   <div class="wrap">
     <a href="#hero" class="brand"><span class="bj">J</span><span class="bt" style="color:#fff">Coffee with J</span></a>
     <p>Every sip tells a story · Specialty coffee &amp; fresh-baked treats · Invercargill</p>
-    <p>2/302 Yarrow Street, Richmond · <a href="tel:0204933531">020 493 3531</a> · <a href="https://www.facebook.com/coffeewithjex" target="_blank" rel="noopener">Facebook</a></p>
+    <p><a href="tel:0204933531" data-cms="phone">020 493 3531</a> · <a href="https://www.facebook.com/coffeewithjex" target="_blank" rel="noopener">Facebook</a></p>
     <p>© <span id="yr"></span> Coffee with J</p>
   </div>
 </footer>
@@ -421,6 +421,43 @@ footer a:hover{color:var(--caramel-soft)}
 </div>
 
 <script>
+  // ---------- CMS hydration ----------
+  // Overlay editable content from Supabase onto the built-in defaults. If anything fails
+  // (offline / not edited yet) the hardcoded text + photos stay — the site can't break.
+  (function () {
+    var CMS = { url: 'https://nkvezionyeeyidhtpjzy.supabase.co', anon: 'sb_publishable_-9l89xivt1ntbMtRetEHmQ_8lEU7qKk', id: 'coffee-with-j' };
+    function digits(p) { return String(p).replace(/[^\d+]/g, ''); }
+    function setAll(sel, v) { document.querySelectorAll(sel).forEach(function (el) { el.textContent = v; }); }
+    function apply(d) {
+      if (!d) return;
+      ['tagline', 'subline', 'address', 'hours-weekday', 'hours-sat', 'hours-closed'].forEach(function (k) { if (d[k]) setAll('[data-cms="' + k + '"]', d[k]); });
+      for (var i = 0; i < 8; i++) {
+        if (d['bake' + i + '-title']) setAll('[data-cms="bake' + i + '-title"]', d['bake' + i + '-title']);
+        if (d['bake' + i + '-desc']) setAll('[data-cms="bake' + i + '-desc"]', d['bake' + i + '-desc']);
+      }
+      if (d.phone) {
+        setAll('[data-cms="phone"]', d.phone);
+        document.querySelectorAll('a[href^="tel:"]').forEach(function (a) { a.href = 'tel:' + digits(d.phone); });
+      }
+      if (d.email) {
+        setAll('[data-cms="email"]', d.email);
+        document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) { a.href = 'mailto:' + d.email; });
+      }
+      if (d.photos) Object.keys(d.photos).forEach(function (key) {
+        var url = d.photos[key]; if (!url) return;
+        var img = document.querySelector('[data-cms-img="' + key + '"]');
+        if (!img) return;
+        img.src = url; img.style.display = '';
+        var fig = img.closest('.tile, .story-photo'); if (fig) fig.classList.remove('noimg');
+      });
+    }
+    fetch(CMS.url + '/rest/v1/cms_content?id=eq.' + CMS.id + '&select=data', {
+      headers: { apikey: CMS.anon, Authorization: 'Bearer ' + CMS.anon },
+    }).then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (rows) { apply(rows && rows[0] && rows[0].data); })
+      .catch(function () { /* keep built-in defaults */ });
+  })();
+
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   addEventListener('load', () => window.scrollTo(0, 0));
   document.getElementById('yr').textContent = new Date().getFullYear();
